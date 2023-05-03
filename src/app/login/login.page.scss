@@ -1,0 +1,97 @@
+.superior{
+    height: 100%;
+    margin: 0;
+}
+ 
+ ion-content {
+    --ion-background-color: #d2e7f5;
+}
+
+ion-header {
+    position: absolute;
+}
+
+ion-toolbar {
+    --ion-background-color: transparent;
+    opacity: 0;
+}
+
+ion-card {
+    --ion-background-color: transparent;
+    box-shadow: none;
+}
+ion-card-title {
+    margin-top: 10px;
+    font-size: 20px;    
+    color: #2D6A4F;
+    text-align: center;
+    font-weight: 600;
+
+}
+ion-card-subtitle{
+    padding-top: 10px;
+    font-size: 11px;
+    color: #898585;
+    text-align: center;
+    font-weight: 300;
+}
+.signin-btns {
+    margin-top: 15px;
+    text-align: center;
+}
+.loginbtn {
+    --ion-color-primary: #0095ff;
+}
+.registrobtn {
+    --ion-color-primary: #ff00b7;
+}
+.text-tag {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    span {
+        font-size: 13px;
+        font-weight: normal;
+        color: #393939;
+    }
+}
+.quickAcces-btns {
+    text-align: center;        
+}
+
+.wrapform {
+    margin-top: 20px;
+}
+.errors {
+    font-size: small;
+	color: var(--ion-color-danger);
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.password-forgot {
+    text-align: right;
+    ion-button {
+        font-size: 12px;
+        text-transform: initial;
+        color: #2D6A4F;
+    }
+}
+
+.footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding-bottom: 1rem;
+    // height: 90px;
+    background-color: #D0DAEE;
+  }
+
+hr.solid {
+    border-top: 3px solid #73b8f9;
+}
+
+
+
+
