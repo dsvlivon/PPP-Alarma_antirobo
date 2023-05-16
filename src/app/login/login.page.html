@@ -1,88 +1,98 @@
-  <ion-header class="ion-no-border">
-    <ion-toolbar>
-
-    </ion-toolbar>
-  </ion-header>
-
   <ion-content>
-
     <ion-card class="superior">
 
       <ion-img src="../../assets/images/header150x70.png"></ion-img>
 
       <ion-card-header>
 
-        <ion-card-title class="ion-no-margin">
-          Ingresar
-        </ion-card-title>
-
-        
-      </ion-card-header>
-
-      <ion-card-content>
-
-        <div class="wrapform">
-          <form [formGroup]="formData">
-            <div class="d-flex flex-column">
-
-              <div class="input-group justify-content-center">
-
-                <ion-item>
-                  <ion-icon name="mail-outline" class="me-1"></ion-icon>
-                  <ion-input formControlName="email" type="text" placeholder="Email"></ion-input>
-                </ion-item>
-
-                <ion-item lines="none">
-                  <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
-                    <p *ngIf="email.errors['required']">Email is required</p>
-                    <p *ngIf="email.errors['email']">Email is invalid</p>
-                  </div>
-                </ion-item>
-
-              </div>
-
-              <br>
-              <div class="input-group justify-content-center">
-
-                <ion-item>
-                  <ion-icon name="lock-closed-outline" class="me-1"></ion-icon>
-                  <ion-input formControlName="password" type="password" placeholder="**********"></ion-input>
-                </ion-item>
-
-                <ion-item lines="none" class="ion-no-margin">
-                  <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
-                    <span *ngIf="password.errors['required']">Ingresar contraseña</span>
-                    <span *ngIf="password.errors['minlength']">Ingresar mínimo 6 digitos</span>
-                  </div>
-                </ion-item>
-
-              </div>
-            </div>
-          </form>
-          <!-- <div class="password-forgot">
-            <ion-button fill="clear" class="ion-no-padding">Olvidó su contraseña?</ion-button>
-          </div> -->
-        </div>
-        <div class="signin-btns">
-          <ion-button (click)="onLogin()" fill="solid" shape="round" class="loginbtn">Login</ion-button>
-          <ion-button (click)="onRegister()" fill="solid" shape="round" class="registrobtn">Registrarse</ion-button>
+        <div class="row mb-4 px-3" style="color: #fff">
+          <h6 class="mb-3 mr-4 mt-3">INGRESA COMO:</h6>
         </div>
 
-        <div class="errors text-center">
-          <p *ngIf="error === true">{{message}}</p>
-        </div>     
+        <ion-grid [fixed]="true">
+          <ion-row>
+            <ion-col size="9" style="background-color: rgb(60, 190, 190); ">
+              <ion-card-content>
+
+                <div class="wrapform">
+                  <form [formGroup]="formData">
+                    <div class="d-flex flex-column">
         
-        <div class="footer">            
-            <div class="text-tag">
-              <span>Accesos rápidos</span>
-            </div>
-            <!-- <hr class="solid">     -->
-          <div class="quickAcces-btns">
-            <ion-button (click)="accesoRapidoAnonimo()" fill="outline" shape="round" >an</ion-button>
-            <ion-button (click)="accesoRapidoInvitado()"fill="outline" shape="round" >in</ion-button>
-            <ion-button (click)="accesoRapidoTester()"fill="outline" shape="round" >te</ion-button>
+                      <div class="input-group justify-content-center">
+        
+                        <ion-item>
+                          <ion-icon name="mail-outline" class="me-1"></ion-icon>
+                          <ion-input formControlName="email" type="text" placeholder="Email"></ion-input>
+                        </ion-item>
+        
+                        <ion-item lines="none">
+                          <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+                            <p *ngIf="email.errors['required']">Email is required</p>
+                            <p *ngIf="email.errors['email']">Email is invalid</p>
+                          </div>
+                        </ion-item>
+        
+                      </div>
+        
+                      <br>
+                      <div class="input-group justify-content-center">
+        
+                        <ion-item>
+                          <ion-icon name="lock-closed-outline" class="me-1"></ion-icon>
+                          <ion-input formControlName="password" type="password" placeholder="**********"></ion-input>
+                        </ion-item>
+        
+                        <ion-item lines="none" class="ion-no-margin">
+                          <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+                            <span *ngIf="password.errors['required']">Ingresar contraseña</span>
+                            <span *ngIf="password.errors['minlength']">Ingresar mínimo 6 digitos</span>
+                          </div>
+                        </ion-item>
+        
+                      </div>
+                    </div>
+                  </form>
+        
+                </div>                                      
+                
+              </ion-card-content>
+            </ion-col>
+            
+            <ion-col size="3" style="align-items: center; justify-content: center; text-align: center; background-color: rgb(20, 180, 220);">
+              <ion-row>
+                <button class="btn-rapido" title="anonimo" (click)="accesoRapido(1)"><ion-img src="../../assets/images/user.png"></ion-img> </button>
+              </ion-row>
+              <ion-row>
+                <button class="btn-rapido" title="invitado" (click)="accesoRapido(2)"><ion-img src="../../assets/images/user2.png"></ion-img> </button>
+              </ion-row>
+              <ion-row>
+                <button class="btn-rapido" title="test" (click)="accesoRapido(3)"><ion-img src="../../assets/images/user3.png"></ion-img> </button>  
+              </ion-row>                
+            </ion-col>
+          </ion-row>
+        
+        </ion-grid>
+        <div >
+          <ion-button expand="full" (click)="onLogin()">Loguearse</ion-button>
+          <!-- <ion-button type="submit" style= "background-color: #EC268F;"expand="full" (click)="logout()">Desloguearse</ion-button> -->
+        </div>
+                      
+        <ion-card-content>  
+          <div class="bg-image">
+                    
+          </div>     
+
+          <div class="errors text-center">
+            <p *ngIf="error === true">{{message}}</p>
+          </div>   
+
+          <div class="text-center mr-3"expand="full">
+               
           </div>
-      </div>
-      </ion-card-content>
+        </ion-card-content>
+
+      </ion-card-header>
+      
+
     </ion-card>
   </ion-content>

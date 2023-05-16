@@ -26,5 +26,9 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+  },
+  "paths": {
+    "@awesome-cordova-plugins/screen-orientation/ngx": ["node_modules/@awesome-cordova-plugins/screen-orientation/ngx/index.d.ts"]
   }
+  
 }

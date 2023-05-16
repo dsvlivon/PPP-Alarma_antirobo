@@ -4,7 +4,15 @@
 }
  
  ion-content {
-    --ion-background-color: #d2e7f5;
+    background: rgb(0, 0, 0);
+    //background: 
+    font-family: Georgia, Times, "Times New Roman", serif;
+    height: 100%;
+    --ion-background-color: linear-gradient(
+        0deg,
+        #FFF212 0%,
+        #00AFEF 100%
+      );
 }
 
 ion-header {
@@ -23,7 +31,7 @@ ion-card {
 ion-card-title {
     margin-top: 10px;
     font-size: 20px;    
-    color: #2D6A4F;
+    color: #00AFEF;
     text-align: center;
     font-weight: 600;
 
@@ -31,20 +39,18 @@ ion-card-title {
 ion-card-subtitle{
     padding-top: 10px;
     font-size: 11px;
-    color: #898585;
+    color: #00AFEF;
     text-align: center;
     font-weight: 300;
 }
 .signin-btns {
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: center;
 }
 .loginbtn {
-    --ion-color-primary: #0095ff;
+    --ion-color-primary:rgba(245, 134, 52, 1);
 }
-.registrobtn {
-    --ion-color-primary: #ff00b7;
-}
+
 .text-tag {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -52,15 +58,12 @@ ion-card-subtitle{
     span {
         font-size: 13px;
         font-weight: normal;
-        color: #393939;
+        color: #160403;
     }
-}
-.quickAcces-btns {
-    text-align: center;        
 }
 
 .wrapform {
-    margin-top: 20px;
+    margin-top: 4px;
 }
 .errors {
     font-size: small;
@@ -74,24 +77,96 @@ ion-card-subtitle{
     ion-button {
         font-size: 12px;
         text-transform: initial;
-        color: #2D6A4F;
+        color: #160403;
     }
 }
 
-.footer {
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    padding-bottom: 1rem;
-    // height: 90px;
-    background-color: #D0DAEE;
-  }
 
 hr.solid {
-    border-top: 3px solid #73b8f9;
+    border-top: 3px solid #ffffff;
 }
 
+.bg-image {
+    height: 11rem;
+    width: auto;
+    background-image: url("../../assets/images/yesNo2.png");
+    background-size: 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+  
 
 
+  button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+  }
+  
 
+  .or {
+    width: 10%;
+    font-weight: bold;
+  }
+  
+  .btn-ingresar:hover {
+    background-color: #00AFEF;
+    cursor: pointer;
+  }
+
+
+    
+  .line {
+    height: 1px;
+    width: 45%;
+    background-color: #e0e0e0;
+    margin-top: 5px;
+  }
+
+    
+  .border-line {
+    border-right: 1px solid #eeeeee;
+  }
+  
+
+////////////////////////////////////////////////////////
+ .btn-rapido{
+    border: #e0e0e0;
+    display: inline-block;
+    border-radius: 100%;
+    color: #001a00;
+    font-size: 10px;
+    height: 40px;
+    width: 40px;
+    outline: none;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }   
+
+
+  .btn-rapido:hover{
+    content: attr(title);
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+  .btn-rapido:hover {
+    background-color: rgb(238, 255, 0);
+    color: #fff212;
+  }
+  .btn-rapido img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /////////////////////////////////////////////////////////////
+
+ 

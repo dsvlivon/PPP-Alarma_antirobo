@@ -1,27 +1,302 @@
-#container {
-  text-align: center;
+// MENU PRINCIPAL
+ion-content {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    
+    height: 100%;
+    background: rgb(0, 0, 0);
+    --ion-background-color: linear-gradient(
+        0deg,
+        #FFF212 0%,
+        #00AFEF 100%
+      );
+    overflow: hidden;
+    position: relative;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
+    .cosas-lindas-btn {
+      background: url("../../assets/images/cosa-linda.jpg");
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      border: 3px solid rgb(255, 255, 255);
+      text-align: center;
+      margin-bottom: 10px;
+      height: 40vh;
+      h2 {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        line-height: 14rem;
+        background: rgba(0, 0, 0, 0.212);
+        border-radius: 15px;
+        text-shadow: 2px 2px 4px #000;
+      }
+    }
+    .cosas-lindas-btn:active {
+      transform: scale(0.9);
+      transition: transform 0.3s;
+    }
+    .cosas-feas-btn {
+      background-image: url("../../assets/images/cosa-fea.jpg");
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      border: 3px solid rgb(255, 255, 255);
+      text-align: center;
+      
+      height: 40vh;
+      h2 {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        line-height: 14rem;
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 15px;
+        text-shadow: 2px 2px 4px #000;
+      }
+    }
+    .cosas-feas-btn:acbtn-tomar-fotove {
+      transform: scale(0.9);
+      transition: transform 0.3s;
+    }
+    .btn-danger {
+      width: 15rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid #fff;
+      box-shadow: 2px 2px 3px #000;
+    }
+    .btn-danger:active {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+  }
+  
+  ion-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15rem;
+    height: 15rem;
+  }
+  
+  // MENU COSAS LINDAS Y FEAS
+  .btns-cosas-lindas {
+    width: 45%;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 10px;
+  }
+  .btns-cosas-lindas:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+  }
+  .btn-menu-cl {
+    background: black;
+  }
+  .btn-sesion-cl {
+    background: rgb(168, 28, 28);
+  }
+  
+  .mis-fotos,
+  .grafico {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .mis-fotos:active,
+  .grafico:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+  }
+  .grafico {
+    width: 13rem;
+    background: black;
+    color: #fff;
+    border: 3px solid #444;
+  }
+  
+  .btn-tomar-foto {
+    display: block;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 18rem;
+    background: url("../../assets/images/camara-mod.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    border: 3px solid rgb(255, 255, 255);
+    text-align: center;
+    h2 {
+      font-size: 1.8rem;
+      font-weight: bolder;
+      line-height: 16rem;
+      
+      border-radius: 15px;
+    }
+  }
+  .btn-tomar-foto:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+  }
+  
+  // LISTADO COSAS LINDAS y FEAS
+  .img-cosas-lindas {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+  }
+  
+  .btn-like-dislike-cl {
+    --background: rgb(160, 221, 198);
+    ion-icon {
+      width: 3rem;
+      height: 3rem;
+      margin-left: 40%;
+    }
+  }
+  
+  .like-activado {
+    color: rgb(1, 143, 1);
+  }
+  
+  // PIPE Y BAR CHART
+  
+  .pipe-chart-container,
+  .bar-chart-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 50vh!important;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  // --------------------------------------------------
+  .btn-70,
+  .btn-70 *,
+  .btn-70 :after,
+  .btn-70 :before,
+  .btn-70:after,
+  .btn-70:before {
+    border: 0 solid;
+    box-sizing: border-box;
+  }
+  .btn-70 {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #00AFEF;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#FFF212, #fff);
+    padding: 0;
+  }
+  .btn-70:disabled {
+    cursor: default;
+  }
+  .btn-70:-moz-focusring {
+    outline: auto;
+  }
+  .btn-70 svg {
+    display: block;
+    vertical-align: middle;
+  }
+  .btn-70 [hidden] {
+    display: none;
+  }
+  .btn-70 {
+    box-shadow: inset 0 0 0 2px #fff;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: color 0.1s linear;
+  }
+  .btn-70:after,
+  .btn-70:before {
+    content: "";
+    position: absolute;
+  }
+  .btn-70:before {
+    border-bottom: var(--border);
+    border-top: var(--border);
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  .btn-70:hover:before {
+    --border: 4px solid #FFF212;
+    -webkit-animation: border-top-and-bottom 1s forwards;
+    animation: border-top-and-bottom 1s forwards;
+  }
+  .btn-70:after {
+    border-left: var(--border);
+    border-right: var(--border);
+    bottom: 50%;
+    right: 0;
+    transform: translateY(50%);
+    width: 100%;
+    z-index: -1;
+  }
+  .btn-70:hover:after {
+    --border: 4px solid #FFF212;
+    -webkit-animation: border-right-and-left 1s forwards;
+    animation: border-right-and-left 1s forwards;
+  }
+  @-webkit-keyframes border-top-and-bottom {
+    0% {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes border-top-and-bottom {
+    0% {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @-webkit-keyframes border-right-and-left {
+    0% {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  @keyframes border-right-and-left {
+    0% {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  

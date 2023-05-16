@@ -20,6 +20,7 @@ export class LoginPage implements OnInit {
   formData: FormGroup;
   error: boolean = false;
   message: string = '';
+
   constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
@@ -46,29 +47,43 @@ export class LoginPage implements OnInit {
     });
   }
 
-  async accesoRapidoAnonimo() {
+  // async accesoRapidoAnonimo() {
+  //   this.formData.setValue({email: "anonimo@anonimo.com", password: "444444"});
+  //   const form = this.formData.value;
+  //   const user = await this.authSrv.signIn(form.email, form.password).then(resp => {
+  //     this.router.navigate(['/home']);
+  //     // return user;
+  //   });
+  // }
+  // async accesoRapidoInvitado() {
+  //   this.formData.setValue({email: "invitado@invitado.com", password: "222222"});
+  //   const form = this.formData.value;
+  //   const user = await this.authSrv.signIn(form.email, form.password).then(resp => {
+  //     this.router.navigate(['/home']);
+  //     // return user;
+  //   });
+  // }
+  // async accesoRapidoTester() {
+  //   this.formData.setValue({email: "tester@tester.com", password: "555555"});
+  //   const form = this.formData.value;
+  //   const user = await this.authSrv.signIn(form.email, form.password).then(resp => {
+  //     this.router.navigate(['/home']);
+  //     // return user;
+  //   });
+  // }
+
+  async accesoRapido(set:any) {
+    if(set == 3){
+      this.formData.setValue({email: "tester@tester.com", password: "555555"});
+    } else if(set == 2){ 
+      this.formData.setValue({email: "invitado@invitado.com", password: "222222"});
+    } else if (set ==1 ){
+      this.formData.setValue({email: "anonimo@anonimo.com", password: "444444"});
+    }
     const form = this.formData.value;
-    const user = await this.authSrv.signIn("anonimo@anonimo.com", "444444").then(resp => {
+    const user = await this.authSrv.signIn(form.email, form.password).then(resp => {
       this.router.navigate(['/home']);
-      return user;
     });
-  }
-  async accesoRapidoInvitado() {
-    const form = this.formData.value;
-    const user = await this.authSrv.signIn("invitado@invitado.com", "222222").then(resp => {
-      this.router.navigate(['/home']);
-      return user;
-    });
-  }
-  async accesoRapidoTester() {
-    const form = this.formData.value;
-    const user = await this.authSrv.signIn("tester@tester.com", "555555").then(resp => {
-      this.router.navigate(['/home']);
-      return user;
-    });
-  }
-  onRegister(){
-    this.router.navigate(['register']);
   }
   get email() {
 		return this.formData.get('email');

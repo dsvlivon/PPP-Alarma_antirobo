@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">PruebaApp_</string>
-    <string name="title_activity_main">PruebaApp_</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">relevamiento_visual</string>
+    <string name="title_activity_main">relevamiento_visual</string>
+    <string name="package_name">io.ionic.relevamiento_visual</string>
+    <string name="custom_url_scheme">io.ionic.relevamiento_visual</string>
 </resources>
